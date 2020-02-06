@@ -6,7 +6,10 @@
              <persistence-unit name="Mysql_UP" transaction-type="RESOURCE_LOCAL">
              	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
              	
-             	<class>fr.eni.jpa.User</class>
+             	<class>fr.eni.jpa.bean.Actor</class>
+             	<class>fr.eni.jpa.bean.Kind</class>
+             	<class>fr.eni.jpa.bean.Movie</class>
+             	<class>fr.eni.jpa.bean.Producer</class>
              	
              	
              	<properties>
