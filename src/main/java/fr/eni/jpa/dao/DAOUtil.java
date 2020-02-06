@@ -1,4 +1,4 @@
-package fr.eni.jpa.dal;
+package fr.eni.jpa.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
