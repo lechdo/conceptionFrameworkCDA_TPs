@@ -7,9 +7,9 @@ import javax.persistence.EntityTransaction;
 
 import fr.eni.jpa.exceptions.DAOException;
 
-public class GenericDaoImpl<T> implements GenericDao<T> {
+public class GenericDaoImpl<T, U> implements GenericDao<T, U> {
 	protected Class<T> entityClass;
-
+	
 	@Override
 	public void add(T obj) throws DAOException {
 		EntityManager em = DAOUtil.getEm();
@@ -42,7 +42,7 @@ public class GenericDaoImpl<T> implements GenericDao<T> {
 	}
 
 	@Override
-	public T findById(int id) throws DAOException {
+	public T findById(U id) throws DAOException {
 		return DAOUtil.getEm().find(entityClass, id);
 	}
 

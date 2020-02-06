@@ -1,4 +1,4 @@
-package fr.eni.jpa.servlet.style;
+package fr.eni.jpa.servlet.kind;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AddServlet
+ * Servlet implementation class UpdateServlet
  */
-@WebServlet("/AddServlet")
-public class AddServlet extends HttpServlet {
+@WebServlet("/UpdateServlet")
+public class UpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddServlet() {
+    public UpdateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

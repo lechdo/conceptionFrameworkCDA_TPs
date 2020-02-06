@@ -1,4 +1,4 @@
-package fr.eni.jpa.servlet.style;
+package fr.eni.jpa.servlet.kind;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class RemoveServlet
+ * Servlet implementation class ListServlet
  */
-@WebServlet("/RemoveServlet")
-public class RemoveServlet extends HttpServlet {
+@WebServlet("/ListServlet")
+public class ListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RemoveServlet() {
+    public ListServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
