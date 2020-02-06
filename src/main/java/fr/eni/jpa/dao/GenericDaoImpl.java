@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import fr.eni.jpa.exceptions.DAOException;
+
 public class GenericDaoImpl<T> implements GenericDao<T> {
 	protected Class<T> entityClass;
 

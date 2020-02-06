@@ -2,6 +2,8 @@ package fr.eni.jpa.dao;
 
 import java.util.List;
 
+import fr.eni.jpa.exceptions.DAOException;
+
 public interface GenericDao<T> {
 
 	public void add(T obj) throws DAOException;
