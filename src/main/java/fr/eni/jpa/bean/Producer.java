@@ -1,5 +1,8 @@
 package fr.eni.jpa.bean;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Producer extends Person {
 
 	private static final long serialVersionUID = 1L;

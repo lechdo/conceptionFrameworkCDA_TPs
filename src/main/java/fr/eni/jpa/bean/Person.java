@@ -16,7 +16,7 @@ public abstract class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy= GenerationType.TABLE)
 	public int id;
 	
 	public String firstName;
@@ -56,6 +56,19 @@ public abstract class Person implements Serializable {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Person [id=");
+		builder.append(id);
+		builder.append(", firstName=");
+		builder.append(firstName);
+		builder.append(", lastName=");
+		builder.append(lastName);
+		builder.append("]");
+		return builder.toString();
 	}
 
 

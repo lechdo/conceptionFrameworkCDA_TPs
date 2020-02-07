@@ -1,13 +1,18 @@
 package fr.eni.jpa.bean;
 
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Movie {
+public class Movie implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +28,9 @@ public class Movie {
 	@ManyToOne
 	Producer producer;
 
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+	List<Actor> actors;
+
 	public String synopsis;
 
 	Boolean isSeen;
@@ -31,13 +39,15 @@ public class Movie {
 		super();
 	}
 
-	public Movie(String title, int year, int duration, Kind kind, Producer producer, String synopsis, Boolean isSeen) {
+	public Movie(String title, int year, int duration, Kind kind, Producer producer, List<Actor> actors,
+			String synopsis, Boolean isSeen) {
 		super();
 		this.title = title;
 		this.year = year;
 		this.duration = duration;
 		this.kind = kind;
 		this.producer = producer;
+		this.actors = actors;
 		this.synopsis = synopsis;
 		this.isSeen = isSeen;
 	}
@@ -104,6 +114,31 @@ public class Movie {
 
 	public void setIsSeen(Boolean isSeen) {
 		this.isSeen = isSeen;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Movie [id=");
+		builder.append(id);
+		builder.append(", title=");
+		builder.append(title);
+		builder.append(", year=");
+		builder.append(year);
+		builder.append(", duration=");
+		builder.append(duration);
+		builder.append(", kind=");
+		builder.append(kind);
+		builder.append(", producer=");
+		builder.append(producer);
+		builder.append(", actors=");
+		builder.append(actors);
+		builder.append(", synopsis=");
+		builder.append(synopsis);
+		builder.append(", isSeen=");
+		builder.append(isSeen);
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

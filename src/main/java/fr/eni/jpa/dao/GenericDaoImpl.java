@@ -8,7 +8,15 @@ import javax.persistence.EntityTransaction;
 import fr.eni.jpa.exceptions.DAOException;
 
 public class GenericDaoImpl<T, U> implements GenericDao<T, U> {
+	
 	protected Class<T> entityClass;
+	
+	
+	public GenericDaoImpl(Class<T> entityClass) {
+		super();
+		this.entityClass = entityClass;
+	}
+
 	
 	@Override
 	public void add(T obj) throws DAOException {
@@ -49,9 +57,9 @@ public class GenericDaoImpl<T, U> implements GenericDao<T, U> {
 	@Override
 	public List<T> findAll() throws DAOException {
 		StringBuffer sb = new StringBuffer();
-		sb.append("select from ");
-		sb.append(entityClass.getName());
-		sb.append(" o");
+		sb.append("select o from ");
+		sb.append(entityClass.getSimpleName());
+		sb.append(" o ");
 		String request = sb.toString();
 		return DAOUtil.getEm().createQuery(request, entityClass).getResultList();
 	}
@@ -69,6 +77,13 @@ public class GenericDaoImpl<T, U> implements GenericDao<T, U> {
 			throw e;
 		}
 		et.commit();
+	}
+
+
+	@Override
+	public void closeConnection() throws DAOException {
+		DAOUtil.close();
+		
 	}
 
 }

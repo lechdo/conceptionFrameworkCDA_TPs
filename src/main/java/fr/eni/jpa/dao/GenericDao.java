@@ -15,4 +15,6 @@ public interface GenericDao<T, U> {
 	public List<T> findAll() throws DAOException;
 
 	public void delete(T obj) throws DAOException;
+	
+	public void closeConnection() throws DAOException;
 }

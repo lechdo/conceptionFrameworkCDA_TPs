@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class RemoveServlet
  */
-@WebServlet("/RemoveServlet")
+@WebServlet("/style/RemoveSesdfvwsdfqsdgqsgrvlet")
 public class RemoveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
