@@ -21,10 +21,10 @@ public class Bouteille {
 	private String millesime;
 	private int quantite;
 
-	@OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@OneToMany(cascade = {CascadeType.PERSIST, })
 	Couleur couleur;
 
-	@OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@OneToMany(cascade = {CascadeType.PERSIST, })
 	Region region;
 
 	public Bouteille(String nom, boolean petillant, String millesime, int quantite, Couleur couleur, Region region) {

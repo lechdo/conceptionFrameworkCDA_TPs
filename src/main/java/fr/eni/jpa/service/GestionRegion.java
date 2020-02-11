@@ -3,10 +3,12 @@ package fr.eni.jpa.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fr.eni.jpa.bo.Region;
 import fr.eni.jpa.dal.IRegionRepository;
 
+@Service(value = "gestionRegion")
 public class GestionRegion implements GestionInterface<Region> {
 
 	@Autowired
