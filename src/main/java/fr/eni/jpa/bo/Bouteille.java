@@ -1,4 +1,4 @@
-package fr.eni.ecole.demo.bo;
+package fr.eni.jpa.bo;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

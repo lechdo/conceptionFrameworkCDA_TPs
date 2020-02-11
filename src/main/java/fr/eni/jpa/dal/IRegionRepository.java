@@ -1,0 +1,9 @@
+package fr.eni.jpa.dal;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import fr.eni.jpa.bo.Region;
+
+public interface IRegionRepository extends JpaRepository<Region, Integer> {
+
+}

@@ -1,4 +1,4 @@
-package fr.eni.ecole.demo.bo;
+package fr.eni.jpa.bo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,21 +7,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Couleur")
-public class Couleur {
+@Table(name = "Region")
+public class Region {
 
-	
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
 	private String nom;
 
-	public Couleur(String nom) {
+	public Region(String nom) {
 		super();
 		this.nom = nom;
 	}
 
-	public Couleur() {
+	public Region() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class Couleur {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Couleur [id=");
+		builder.append("Region [id=");
 		builder.append(id);
 		builder.append(", nom=");
 		builder.append(nom);
