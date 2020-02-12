@@ -37,4 +37,13 @@ public class GestionBouteille implements GestionInterface<Bouteille> {
 		return irep.findAll();
 	}
 
+	@Override
+	public Bouteille recuperer(int id) {
+		return irep.findOne(id);
+	}
+	
+	public List<Bouteille> listerTriParNom() {
+		return irep.findAllByOrderByNomAsc();
+	}
+
 }

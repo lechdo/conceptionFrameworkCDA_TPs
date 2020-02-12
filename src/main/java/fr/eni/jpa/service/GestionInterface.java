@@ -11,5 +11,7 @@ public interface GestionInterface<T> {
 	void modifier(T ele);
 
 	List<T> lister();
+	
+	T recuperer(int id);
 
 }

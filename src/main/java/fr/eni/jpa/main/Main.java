@@ -12,7 +12,7 @@ public class Main {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		GestionRegion gc = context.getBean("gestionRegion", GestionRegion.class);
 		
-		
+		System.out.println("Regions :");
 		for (Region region : gc.lister()) {
 			System.out.println(region);
 		}

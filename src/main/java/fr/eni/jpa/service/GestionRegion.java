@@ -37,4 +37,9 @@ public class GestionRegion implements GestionInterface<Region> {
 		return irep.findAll();
 	}
 
+	@Override
+	public Region recuperer(int id) {
+		return irep.findOne(id);
+	}
+
 }

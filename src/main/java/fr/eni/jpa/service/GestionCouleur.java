@@ -37,4 +37,9 @@ public class GestionCouleur implements GestionInterface<Couleur> {
 		return irep.findAll();
 	}
 
+	@Override
+	public Couleur recuperer(int id) {
+		return irep.findOne(id);
+	}
+
 }

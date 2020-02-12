@@ -1,15 +1,14 @@
 package fr.eni.jpa.bo;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Bouteille")
+@Table(name = "Bouteilles")
 public class Bouteille {
 
 	@Id
@@ -21,10 +20,10 @@ public class Bouteille {
 	private String millesime;
 	private int quantite;
 
-	@OneToMany(cascade = {CascadeType.PERSIST, })
+	@ManyToOne
 	Couleur couleur;
 
-	@OneToMany(cascade = {CascadeType.PERSIST, })
+	@ManyToOne
 	Region region;
 
 	public Bouteille(String nom, boolean petillant, String millesime, int quantite, Couleur couleur, Region region) {
