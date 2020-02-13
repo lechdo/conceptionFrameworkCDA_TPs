@@ -1,4 +1,4 @@
-package fr.eni.jpa.bean;
+package fr.eni.mvc.bean;
 
 import java.io.Serializable;
 
